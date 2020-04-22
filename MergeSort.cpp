@@ -1,7 +1,7 @@
 #include <iostream> 
 
 
-
+// Fusionne Tableaux triés. 
 void Merge(int *T,int a, int b , int m)
 {
    
