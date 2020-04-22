@@ -1,7 +1,7 @@
 #include <iostream> 
 
 
-// Fusionne Tableaux triés. 
+
 void Merge(int *T,int a, int b , int m)
 {
    
@@ -24,22 +24,22 @@ void Merge(int *T,int a, int b , int m)
         Indice++ ; 
     }
 
-    for( int i = Iterator_i ; Iterator_i < m ; i++ )
+    while (Iterator_i<=m)
     {
-        MergeTable[Indice] = T[i] ;
-        Indice++ ;
+        MergeTable[Indice] = T[Iterator_i];
+        Indice++;
+        Iterator_i++;
     }
-
-    for( int j = Iterator_j ; j < b ; j++ )
+    while (Iterator_j<=b)
     {
-        MergeTable[Indice] = T[j] ;
-        Indice++ ;
+        MergeTable[Indice] = T[Iterator_j];
+        Indice++;
+        Iterator_j++;
     }
-    
     for( int j = a ; j < Indice ; j++ )
     {
         
-        T[j] = MergeTable[j] ; 
+        T[j] = MergeTable[j] ;   
     }
 }
 
